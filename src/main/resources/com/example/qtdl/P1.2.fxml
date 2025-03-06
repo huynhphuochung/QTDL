@@ -5,15 +5,13 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
-
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
@@ -25,12 +23,9 @@
                             <children>
                                 <AnchorPane layoutX="34.0" layoutY="-86.0" prefHeight="114.4" prefWidth="800.0" style="-fx-background-color: E9EBED;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                     <children>
-                                        <Button layoutX="748.0" layoutY="5.0" mnemonicParsing="false" text="Thoát" />
-                                        <Button layoutX="688.0" layoutY="5.0" mnemonicParsing="false" text="Thu nhỏ" />
-                                        <Polygon fill="DODGERBLUE" layoutX="38.0" layoutY="18.0" points="-12.399993896484375, 9.999994277954102, 14.0, 3.6000003814697266, -2.0000076293945312, -6.400005340576172" stroke="BLACK" strokeType="INSIDE" />
-                                        <Label layoutX="65.0" layoutY="11.0" text="Hệ thống quản lý nhân sự">
+                                        <Label layoutX="375.0" layoutY="11.0" prefHeight="20.0" prefWidth="193.0" text="Hệ thống quản lý nhân sự">
                                             <font>
-                                                <Font name="Tahoma Bold" size="11.0" />
+                                                <Font name="Tahoma Bold" size="14.0" />
                                             </font>
                                         </Label>
                                     </children>
@@ -41,40 +36,34 @@
                     <left>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                             <children>
-                                <AnchorPane layoutX="-14.0" layoutY="51.0" prefHeight="584.8" prefWidth="200.0" style="-fx-background-color: #73B4F1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <AnchorPane layoutX="-14.0" layoutY="-35.2" prefHeight="620.0" prefWidth="200.0" style="-fx-background-color: #73B4F1;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-35.0">
                                     <children>
-                                        <Circle fill="DODGERBLUE" layoutX="100.0" layoutY="84.0" radius="59.0" stroke="BLACK" strokeType="INSIDE" />
-                                        <Label layoutX="68.0" layoutY="155.0" text="Xin chào">
-                                            <font>
-                                                <Font name="Tahoma Bold" size="15.0" />
-                                            </font>
-                                        </Label>
-                                        <Label layoutX="58.0" layoutY="174.0" text="Usename ">
-                                            <font>
-                                                <Font name="Tahoma Bold" size="17.0" />
-                                            </font>
-                                        </Label>
-                                        <Line endX="53.09999084472656" endY="1.52587890625E-5" layoutX="124.0" layoutY="195.0" startX="-100.0" />
-                                        <Button layoutX="25.0" layoutY="211.0" mnemonicParsing="false" text="Thêm nhân viên">
+                                        <Line endX="79.0" layoutX="120.0" layoutY="140.0" startX="-121.0" stroke="#fff8f8" />
+                                        <Button layoutX="15.0" layoutY="180.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="170.0" text="Thêm nhân viên">
                                             <font>
                                                 <Font name="Tahoma Bold" size="16.0" />
                                             </font>
                                         </Button>
-                                        <Button layoutX="25.0" layoutY="260.0" mnemonicParsing="false" text="Thống kê lương">
+                                        <Button layoutX="14.0" layoutY="264.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="171.0" text="Thống kê lương">
                                             <font>
                                                 <Font name="Tahoma Bold" size="16.0" />
                                             </font>
                                         </Button>
-                                        <Button layoutX="25.0" layoutY="308.0" mnemonicParsing="false" text="lập phiếu lương">
+                                        <Button layoutX="15.0" layoutY="359.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="169.0" text="lập phiếu lương">
                                             <font>
                                                 <Font name="Tahoma Bold" size="16.0" />
                                             </font>
                                         </Button>
-                                        <Button layoutX="123.0" layoutY="547.0" mnemonicParsing="false" text="LOGUOT">
+                                        <Button layoutX="111.0" layoutY="547.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="LOGUOT">
                                             <font>
                                                 <Font name="Tahoma" size="12.0" />
                                             </font>
                                         </Button>
+                              <ImageView fitHeight="113.0" fitWidth="134.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../image/partners.png" />
+                                 </image>
+                              </ImageView>
                                     </children>
                                 </AnchorPane>
                             </children>
@@ -97,6 +86,11 @@
                                                     </columns>
                                                 </TableView>
                                                 <TextField layoutX="164.0" layoutY="14.0" prefHeight="26.0" prefWidth="248.0" promptText="Search" />
+                                    <ImageView fitHeight="34.0" fitWidth="28.0" layoutX="425.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../image/magnifying-glass.png" />
+                                       </image>
+                                    </ImageView>
                                             </children>
                                         </AnchorPane>
                                         <Label layoutX="21.0" layoutY="332.0" text="ID">

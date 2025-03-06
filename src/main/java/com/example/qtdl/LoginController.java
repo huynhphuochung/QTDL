@@ -32,7 +32,7 @@ public class LoginController {
         if (isLoginValid(username, password)) {
             try {
                 // Tải trang p1.fxml
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("P1.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("P1.2.fxml"));
                 Parent root = loader.load();
 
                 // Chuyển sang trang p1.fxml
