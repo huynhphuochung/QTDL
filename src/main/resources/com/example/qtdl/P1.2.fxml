@@ -76,7 +76,7 @@
                                     <children>
                                         <AnchorPane layoutX="7.0" layoutY="8.0" prefHeight="229.0" prefWidth="575.0" style="-fx-background-color: E9EBED; -fx-border-radius: 1px; -fx-border-color: #000;">
                                             <children>
-                                                <TableView layoutX="3.0" layoutY="50.0" prefHeight="255.0" prefWidth="567.0">
+                                                <TableView fx:id="employeeTableView" layoutX="3.0" layoutY="50.0" prefHeight="255.0" prefWidth="567.0">
                                                     <columns>
                                                         <TableColumn fx:id="idcolumn" prefWidth="59.20001220703125" text="ID" />
                                                         <TableColumn fx:id="namecolumn" prefWidth="155.20001220703125" text="HỌ VÀ TÊN" />

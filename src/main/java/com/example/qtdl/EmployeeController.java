@@ -23,22 +23,36 @@ public class EmployeeController {
     @FXML
     private TableColumn<Employee, String> namecolumn;
     @FXML
-    private TableColumn<Employee, String> sdtcolumn;
+    private TableColumn<Employee, Integer> sdtcolumn;
     @FXML
     private TableColumn<Employee, String> gioitinhcolumn;
     @FXML
     private TableColumn<Employee, String> trangthaicolumn;
     private final ObservableList<Employee> employeeList = FXCollections.observableArrayList(
-            new Employee("E001", "Alice", "123456", "nu", trangthai:"ok"),
-            new Employee("E002", "Bob", "Developer", ),
-            new Employee("E003", "Charlie", "Tester", 3500F)
+            new Employee("E001", "Alice", 123456, "nam", "ok"),
+            new Employee("E002", "Bob", 2345678,"nam","ok" ),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok"),
+            new Employee("E003", "Charlie", 123456, "nu", "ok")
     );
     @FXML
     private void initialize() {
         // Gán dữ liệu cho các cột của TableView
-        idcolumn.setCellValueFactory(cellData -> (ObservableValue<String>) cellData.getValue().getidnv());
-        namecolumn.setCellValueFactory(cellData -> (ObservableValue<String>) cellData.getValue().nameProperty());
-        chucvucolumn.setCellValueFactory(cellData -> (ObservableValue<String>) cellData.getValue().getChucvunv());
+     idcolumn.setCellValueFactory(cellData -> cellData.getValue().idnvProperty() );
+     namecolumn.setCellValueFactory(cellData -> cellData.getValue().hotennvProperty() );
+     gioitinhcolumn.setCellValueFactory(cellData -> cellData.getValue().gioitinhnvProperty() );
+     trangthaicolumn.setCellValueFactory(cellData -> cellData.getValue().trangthaiProperty() );
+     sdtcolumn.setCellValueFactory(cellData -> cellData.getValue().sdtProperty().asObject());
         employeeTableView.setItems(employeeList);
     }
 
@@ -78,12 +92,6 @@ public class EmployeeController {
             alert.showAndWait();
         }
     }
-    @FXML
-    private void printEmployeeList() {
-        // Duyệt qua danh sách nhân viên và in thông tin của mỗi nhân viên
-        for (Employee employee : employeeList) {
-            System.out.println("ID: " + employee.getidnv() + ", Name: " + employee.nameProperty().get()
-                    + ", Position: " + employee.getChucvunv() + ", Salary: ");
-        }
-    }
+
+
 }

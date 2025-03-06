@@ -4,36 +4,39 @@ import eu.hansolo.toolbox.properties.DoubleProperty;
 import eu.hansolo.toolbox.properties.FloatProperty;
 import eu.hansolo.toolbox.properties.IntegerProperty;
 import eu.hansolo.toolbox.properties.StringProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+
 // hàm xây dựng
 public class Employee {
-    private StringProperty idnhanvien;
-    private StringProperty hotennv;
-    private IntegerProperty sdt;
-    private StringProperty gioitinh;
-    private StringProperty trangthai;
+    private SimpleStringProperty idnhanvien;
+    private SimpleStringProperty hotennv;
+    private SimpleIntegerProperty sdt;
+    private SimpleStringProperty gioitinh;
+    private SimpleStringProperty trangthai;
     public Employee(String idnhanvien,String hotennv,int sdt ,String gioitinh,String trangthai   )
     {
-        this.idnhanvien= new StringProperty(idnhanvien);
-        this.hotennv= new StringProperty(hotennv);
-        this.sdt= new IntegerProperty(sdt);
-        this.gioitinh=new StringProperty(gioitinh);
-        this.trangthai=new StringProperty(trangthai);
+        this.idnhanvien= new SimpleStringProperty(idnhanvien);
+        this.hotennv= new SimpleStringProperty(hotennv);
+        this.sdt= new SimpleIntegerProperty(sdt);
+        this.gioitinh=new SimpleStringProperty(gioitinh);
+        this.trangthai=new SimpleStringProperty(trangthai);
     }
     //idnhan vien
-    public StringProperty idnvProperty() {
+    public SimpleStringProperty idnvProperty() {
         return idnhanvien;
     }
-    public StringProperty getidnv()
+    public SimpleStringProperty getidnv()
     {
         return idnhanvien;
     }
-    public void setidnhanvien(String idnhanvien)
+    public void setidnhanvien(SimpleStringProperty idnhanvien)
     {
-        this.idnhanvien.set(idnhanvien);
+        this.idnhanvien.set(String.valueOf(idnhanvien));
     }
     //
      // họ tên nhan vien
-    public StringProperty hotennvProperty()
+    public SimpleStringProperty hotennvProperty()
     {
         return this.hotennv;
     }
@@ -46,10 +49,10 @@ public class Employee {
         this.hotennv.set(hotennv);
     }
     //sdt nhan vien
-    public IntegerProperty sdtProperty() {
+    public SimpleIntegerProperty sdtProperty() {
         return sdt;
     }
-    public IntegerProperty getsdt()
+    public SimpleIntegerProperty getsdt()
     {
         return sdt;
     }
@@ -58,26 +61,26 @@ public class Employee {
         this.sdt.set(sdt);
     }
    //gioitinhnhân viên
-   public StringProperty gioitinhnvProperty()
+   public SimpleStringProperty gioitinhnvProperty()
    {
        return this.gioitinh;
    }
-    public String getgioitinhnnv()
+    public SimpleStringProperty getgioitinhnnv()
     {
-        return gioitinh.get();
+        return gioitinh;
     }
     public void setgioitinhnv(String gioitinh)
     {
         this.gioitinh.set(gioitinh);
     }
     //trạng thái nhân viên
-    public StringProperty trangthaiProperty()
+    public SimpleStringProperty trangthaiProperty()
     {
         return this.trangthai;
     }
-    public String gettrangthainhnnv()
+    public SimpleStringProperty gettrangthainhnnv()
     {
-        return trangthai.get();
+        return trangthai;
     }
     public void settrangthainv(String trangthai)
     {
