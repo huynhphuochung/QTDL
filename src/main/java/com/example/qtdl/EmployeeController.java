@@ -23,12 +23,14 @@ public class EmployeeController {
     @FXML
     private TableColumn<Employee, String> namecolumn;
     @FXML
-    private TableColumn<Employee, String> chucvucolumn;
+    private TableColumn<Employee, String> sdtcolumn;
     @FXML
-    private TableColumn<Employee, Double> hesoluongcolumn;
+    private TableColumn<Employee, String> gioitinhcolumn;
+    @FXML
+    private TableColumn<Employee, String> trangthaicolumn;
     private final ObservableList<Employee> employeeList = FXCollections.observableArrayList(
-            new Employee("E001", "Alice", "Manager", 5000F),
-            new Employee("E002", "Bob", "Developer", 4000F),
+            new Employee("E001", "Alice", "123456", "nu", trangthai:"ok"),
+            new Employee("E002", "Bob", "Developer", ),
             new Employee("E003", "Charlie", "Tester", 3500F)
     );
     @FXML

@@ -13,9 +13,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.qtdl.EmployeeController">
     <children>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+        <AnchorPane prefHeight="200.0" prefWidth="200.0"  >
             <children>
                 <BorderPane layoutX="14.0" layoutY="55.0" prefHeight="620.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <top>
@@ -54,7 +54,7 @@
                                                 <Font name="Tahoma Bold" size="16.0" />
                                             </font>
                                         </Button>
-                                        <Button layoutX="111.0" layoutY="547.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="LOGUOT">
+                                        <Button onAction="#onLogout" layoutX="111.0" layoutY="547.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="74.0" text="LOGUOT">
                                             <font>
                                                 <Font name="Tahoma" size="12.0" />
                                             </font>
@@ -78,11 +78,11 @@
                                             <children>
                                                 <TableView layoutX="3.0" layoutY="50.0" prefHeight="255.0" prefWidth="567.0">
                                                     <columns>
-                                                        <TableColumn prefWidth="59.20001220703125" text="ID" />
-                                                        <TableColumn prefWidth="155.20001220703125" text="HỌ VÀ TÊN" />
-                                                        <TableColumn prefWidth="143.20001220703125" text="SĐT" />
-                                                        <TableColumn prefWidth="108.79998779296875" text="GIỚI TÍNH" />
-                                                        <TableColumn prefWidth="93.5999755859375" text="TRẠNG THÁI" />
+                                                        <TableColumn fx:id="idcolumn" prefWidth="59.20001220703125" text="ID" />
+                                                        <TableColumn fx:id="namecolumn" prefWidth="155.20001220703125" text="HỌ VÀ TÊN" />
+                                                        <TableColumn fx:id="sdtcolumn" prefWidth="143.20001220703125" text="SĐT" />
+                                                        <TableColumn fx:id="gioitinhcolumn" prefWidth="108.79998779296875" text="GIỚI TÍNH" />
+                                                        <TableColumn fx:id="trangthaicolumn" prefWidth="93.5999755859375" text="TRẠNG THÁI" />
                                                     </columns>
                                                 </TableView>
                                                 <TextField layoutX="164.0" layoutY="14.0" prefHeight="26.0" prefWidth="248.0" promptText="Search" />
